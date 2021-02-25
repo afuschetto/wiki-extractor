@@ -2,39 +2,26 @@
 # -*- coding: utf-8 -*-
 
 # =============================================================================
-#  Version: 1.5 (Oct 17, 2009)
-#  Author: Antonio Fuschetto (fuschett@di.unipi.it), University of Pisa
+#  Version: 2.0.0-alpha.1 (Feb 28, 2021)
 # =============================================================================
 
-# =============================================================================
-#  This file is part of Tanl.
-#
-#  Tanl is free software; you can redistribute it and/or modify it
-#  under the terms of the GNU General Public License, version 3,
-#  as published by the Free Software Foundation.
-#
-#  Tanl is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-# =============================================================================
+"""wiki-extractor:
+Extract and clean text from a given Wikipedia database dump and store the result
+in a series of text files of similar size. Each produced file contains several
+documents in the following format:
 
-"""Wikipedia Extractor:
-Extracts and cleans text from Wikipedia database dump and stores output in a
-number of files of similar size in a given directory. Each file contains
-several documents in Tanl document format.
+  <doc id="" url="" title="">
+    ...
+  </doc>
 
 Usage:
-  WikiExtractor.py [options]
+  wiki-extractor.py [options]
 
 Options:
   -c, --compress        : compress output files using bzip2 algorithm
-  -b ..., --bytes=...   : put specified bytes per output file (500K by default)
-  -o ..., --output=...  : place output files in specified directory (current
-                          directory by default)
+  -b ..., --bytes=...   : put specified bytes per output file (default 500K)
+  -o ..., --output=...  : place output files in specified directory (default
+                          current)
   --help                : display this help and exit
   --usage               : display script usage
 """
